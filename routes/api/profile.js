@@ -39,6 +39,7 @@ router.post(
   "/",
   auth,
   body("skills", "Skills is required").notEmpty(),
+  body("status", "Status is required").notEmpty(),
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -49,6 +50,8 @@ router.post(
     const {
       website,
       skills,
+      location,
+      status,
       youtube,
       facebook,
       linkedin,
@@ -62,6 +65,8 @@ router.post(
     const profileFields = {};
     profileFields.user = req.user.id;
     if (website) profileFields.website = website;
+    if (status) profileFields.status = status;
+    if (location) profileFields.location = location;
     if (bio) profileFields.bio = bio;
     if (githubusername) profileFields.githubusername = githubusername;
     if (skills) {

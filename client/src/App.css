@@ -158,6 +158,10 @@ img {
   color: #333;
 }
 
+.alert i:hover {
+  cursor: pointer;
+}
+
 .btn-primary,
 .bg-primary,
 .badge-primary,

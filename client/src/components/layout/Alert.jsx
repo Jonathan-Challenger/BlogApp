@@ -31,7 +31,7 @@ const Alert = ({ alerts, removeAlert }) => {
 };
 
 Alert.propTypes = {
-  alert: PropTypes.array.isRequired,
+  alert: PropTypes.array,
   removeAlert: PropTypes.func.isRequired,
 };
 

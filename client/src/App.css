@@ -19,7 +19,8 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: var(--dark-color);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 a {

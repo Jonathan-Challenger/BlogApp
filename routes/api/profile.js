@@ -46,32 +46,26 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    // Destructure request
+    // destructure the request
     const {
-      website,
       skills,
-      location,
-      status,
       youtube,
-      facebook,
-      linkedin,
-      instagram,
       twitter,
-      bio,
-      githubusername,
+      instagram,
+      linkedin,
+      facebook,
+      // spread the rest of the fields we don't need to check
+      ...rest
     } = req.body;
 
-    // Build profile object
-    const profileFields = {};
-    profileFields.user = req.user.id;
-    if (website) profileFields.website = website;
-    if (status) profileFields.status = status;
-    if (location) profileFields.location = location;
-    if (bio) profileFields.bio = bio;
-    if (githubusername) profileFields.githubusername = githubusername;
-    if (skills) {
-      profileFields.skills = skills.split(",").map(skill => skill.trim());
-    }
+    // build a profile
+    const profileFields = {
+      user: req.user.id,
+      skills: Array.isArray(skills)
+        ? skills
+        : skills.split(",").map(skill => " " + skill.trim()),
+      ...rest,
+    };
 
     // Build social object
     profileFields.social = {};
@@ -90,7 +84,7 @@ router.post(
         profile = await Profile.findOneAndUpdate(
           { user: req.user.id },
           { $set: profileFields },
-          { new: true }
+          { new: true, upsert: true, setDefaultsOnInsert: true }
         );
 
         return res.json(profile);

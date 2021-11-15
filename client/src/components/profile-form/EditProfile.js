@@ -71,7 +71,7 @@ const EditProfile = ({
   };
 
   return (
-    <>
+    <section className='container'>
       <h1 className='large text-primary'>Create Your Profile</h1>
       <p className='lead'>
         <i className='fas fa-user'></i> Make your profile stand out with some
@@ -225,7 +225,7 @@ const EditProfile = ({
           Go Back
         </Link>
       </form>
-    </>
+    </section>
   );
 };
 

@@ -34,7 +34,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <>
+    <section className='container'>
       <h1 className='large text-primary'>Sign Up</h1>
       <p className='lead'>
         <i className='fas fa-user-plus'></i> Create Your Account
@@ -47,6 +47,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name='name'
             value={name}
             onChange={e => onChange(e)}
+            required
           />
         </div>
         <div className='form-group'>
@@ -56,6 +57,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name='email'
             value={email}
             onChange={e => onChange(e)}
+            required
           />
           <small className='form-text'>
             This site uses Gravatar so if you want a profile image, use a
@@ -70,6 +72,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value={password}
             onChange={e => onChange(e)}
             minLength='6'
+            required
           />
         </div>
         <div className='form-group'>
@@ -80,6 +83,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value={password2}
             onChange={e => onChange(e)}
             minLength='6'
+            required
           />
         </div>
         <input type='submit' className='btn btn-primary' value='Register' />
@@ -87,7 +91,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <p className='my-1'>
         Already have an account? <Link to='/login'>Sign In</Link>
       </p>
-    </>
+    </section>
   );
 };
 

@@ -19,7 +19,7 @@ const Dashboard = ({
   return loading && profile === null ? (
     <Spinner />
   ) : (
-    <>
+    <section className='container'>
       <h1 className='large text-primary'>Dashboard</h1>
       <p className='lead'>
         <i className='fas fa-user' style={{ marginRight: "10px" }}></i>
@@ -46,7 +46,7 @@ const Dashboard = ({
           </Link>
         </>
       )}
-    </>
+    </section>
   );
 };
 

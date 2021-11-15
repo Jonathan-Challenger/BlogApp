@@ -23,7 +23,7 @@ const Profile = ({
       {profile === null || loading ? (
         <Spinner />
       ) : (
-        <>
+        <section className='container'>
           <Link to='/profiles' className='btn btn-light'>
             Back to Profiles
           </Link>
@@ -41,7 +41,7 @@ const Profile = ({
               <ProfileGithub username={profile.githubusername} />
             )}
           </div>
-        </>
+        </section>
       )}
     </>
   );

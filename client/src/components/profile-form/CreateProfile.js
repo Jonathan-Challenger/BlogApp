@@ -47,7 +47,7 @@ const CreateProfile = ({ createProfile, history }) => {
   };
 
   return (
-    <>
+    <section className='container'>
       <h1 className='large text-primary'>Create Your Profile</h1>
       <p className='lead'>
         <i className='fas fa-user'></i> Make your profile stand out with some
@@ -201,7 +201,7 @@ const CreateProfile = ({ createProfile, history }) => {
           Go Back
         </Link>
       </form>
-    </>
+    </section>
   );
 };
 

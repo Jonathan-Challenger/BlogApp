@@ -8,25 +8,25 @@ const Alert = ({ alerts, removeAlert }) => {
   };
 
   return (
-    alerts !== null &&
-    alerts.length > 0 &&
-    alerts.map(alert => (
-      <div
-        key={alert.id}
-        className={`alert alert-${alert.alertType}`}
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        {alert.msg}
-        <i
-          className='fas fa-times fa-lg'
-          onClick={() => handleRemove(alert.id)}
-        ></i>
-      </div>
-    ))
+    <div className='alert-wrapper'>
+      {alerts.map(alert => (
+        <div
+          key={alert.id}
+          className={`alert alert-${alert.alertType}`}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          {alert.msg}
+          <i
+            className='fas fa-times fa-lg'
+            onClick={() => handleRemove(alert.id)}
+          ></i>
+        </div>
+      ))}
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 {
-    "mongoURI": "mongodb+srv://jonathan1997:jonathan1997@cluster0.ytmft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtSecret": "BA_mysecret",
-    "githubClientId": "f0714b6a7f74a1d6d6ad",
-    "githubSecret": "f90abd83be1a088f5b35dea89517d81562d38960"
+  "mongoURI": "mongodb+srv://jonathan1997:jonathan1997@cluster0.ytmft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "BA_mysecret",
+  "githubClientId": "073a41cdd6cf11dc39eb",
+  "githubSecret": "670a82acee0410295400f29f9b41a60a24363a6a",
+  "githubToken": "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"
 }

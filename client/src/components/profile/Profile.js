@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
+import ProfileGithub from "./ProfileGithub";
 
 const Profile = ({
   getProfileById,
@@ -36,6 +37,9 @@ const Profile = ({
           <div className='profile-grid my-1'>
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </div>
         </>
       )}

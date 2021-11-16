@@ -14,6 +14,7 @@ import CreateProfile from "./components/profile-form/CreateProfile";
 import EditProfile from "./components/profile-form/EditProfile";
 import Profiles from "./components/profiles/Profiles";
 import Profile from "./components/profile/Profile";
+import Posts from "./components/posts/Posts";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -46,6 +47,7 @@ const App = () => {
               component={CreateProfile}
             />
             <PrivateRoute exact path='/edit-profile' component={EditProfile} />
+            <PrivateRoute exact path='/posts' component={Posts} />
           </Switch>
         </>
       </Router>

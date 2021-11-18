@@ -39,6 +39,10 @@ img {
   width: 100%;
 }
 
+textarea {
+  font-family: "Raleway", sans-serif;
+}
+
 /* Utilities */
 
 .container {
